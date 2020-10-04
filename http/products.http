@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3000
+@productId = 0.13312947718832735
+@contentType = application/json
+
+###
+GET {{baseUrl}}/products HTTP/1.1
+
+
+###
+//insert product
+POST {{baseUrl}}/products HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "title":"Nepali Jutta",
+    "description":"Perfect pairs of Nepali hand made shoes",
+    "price": 250
+}
+
+###
+//get single product
+GET {{baseUrl}}/products/{{productId}} HTTP/1.1
+
+### 
+//update product
+PATCH {{baseUrl}}/products/{{productId}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "description":"Perfect pairs of hand made shoes, made in nepal",
+    "price": 350
+}
+
+###
+//delete product
+DELETE {{baseUrl}}/products/{{productId}} HTTP/1.1
