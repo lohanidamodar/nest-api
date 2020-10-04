@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000
-@productId = 0.13312947718832735
+@productId = 5f7a066ee51e5c3f38e60bea
 @contentType = application/json
 
 ###
